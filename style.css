@@ -1,3 +1,4 @@
+
         :root {
             --bs-blue: #2785f9;
             --dark-bg: #121823;
@@ -5,61 +6,234 @@
             --primary-color: #3390ff;
             --secondary-color: #5a8ddb;
             --text-color: #cbd6e3;
+            --accent-color: #9c27b0;
+            --header-bg: rgba(30, 38, 53, 0.9);
         }
+        
         body {
-            background-color: var(--dark-bg);
+            background: linear-gradient(135deg, #0a0f1d, #1a2238);
             color: var(--text-color);
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            min-height: 100vh;
+            background-attachment: fixed;
         }
-        .nav-pills .nav-link.active {
-            background-color: var(--primary-color);
+        
+        .header-container {
+            background: var(--header-bg);
+            backdrop-filter: blur(10px);
+            padding: 2rem 0;
+            border-bottom: 2px solid var(--primary-color);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .header-container::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--accent-color), var(--primary-color), var(--accent-color));
+        }
+        
+        .university-title {
             color: #fff;
-            font-weight: 600;
-            box-shadow: 0 0 10px var(--primary-color);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 0.5rem;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
         }
+        
+        .subject-title {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--primary-color);
+            text-shadow: 0 0 15px rgba(51, 144, 255, 0.7);
+            margin-bottom: 1.5rem;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .subject-title::after {
+            content: "";
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(90deg, transparent, var(--primary-color), transparent);
+        }
+        
+        .student-info {
+            background: rgba(30, 38, 53, 0.7);
+            border-radius: 10px;
+            padding: 1.2rem;
+            margin: 1.5rem 0;
+            border: 1px solid rgba(90, 141, 219, 0.3);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+        
+        .info-item {
+            margin-bottom: 0.8rem;
+            font-size: 1.1rem;
+        }
+        
+        .info-item i {
+            color: var(--primary-color);
+            width: 30px;
+            text-align: center;
+            margin-right: 10px;
+        }
+        
         .nav-pills .nav-link {
             color: var(--text-color);
-            transition: background-color 0.3s, color 0.3s;
+            border-radius: 50px;
+            padding: 0.8rem 1.5rem;
+            margin: 0 5px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            background: rgba(30, 38, 53, 0.7);
+            border: 1px solid rgba(90, 141, 219, 0.3);
         }
-        .nav-pills .nav-link:hover {
-            background-color: var(--secondary-color);
+        
+        .nav-pills .nav-link.active {
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
             color: #fff;
-        }
-        .content-section {
-            background-color: var(--dark-bg-alt);
-            border-radius: 10px;
-            padding: 25px;
-            margin-top: 20px;
             box-shadow: 0 0 15px rgba(51, 144, 255, 0.5);
+            transform: translateY(-3px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
         }
+        
+        .nav-pills .nav-link:hover:not(.active) {
+            background: rgba(90, 141, 219, 0.3);
+            transform: translateY(-2px);
+        }
+        
+        .content-section {
+            background: rgba(30, 38, 53, 0.7);
+            border-radius: 15px;
+            padding: 25px;
+            margin-top: 25px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+            border: 1px solid rgba(90, 141, 219, 0.2);
+            backdrop-filter: blur(10px);
+        }
+        
+        .method-tabs .nav-link {
+            background: rgba(25, 32, 45, 0.7);
+            border-radius: 8px;
+            margin: 0 5px 10px;
+        }
+        
+        .method-tabs .nav-link.active {
+            background: linear-gradient(135deg, #3a86ff, #8338ec);
+        }
+        
         h1, h2, h3 {
             color: var(--primary-color);
+            margin-bottom: 1.2rem;
+            position: relative;
         }
+        
+        h2::after {
+            content: "";
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background: var(--primary-color);
+            border-radius: 3px;
+        }
+        
         .image-container {
             text-align: center;
-            margin: 20px 0;
+            margin: 25px 0;
+            background: rgba(20, 25, 35, 0.6);
+            padding: 15px;
+            border-radius: 10px;
+            border: 1px solid rgba(90, 141, 219, 0.2);
         }
+        
         img {
             max-width: 100%;
             border-radius: 8px;
-            box-shadow: 0 0 15px rgba(51, 144, 255, 0.6);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+            margin: 10px 0;
+            border: 1px solid rgba(90, 141, 219, 0.3);
+            transition: transform 0.3s ease;
         }
+        
+        img:hover {
+            transform: translateY(-5px);
+        }
+        
         footer {
             text-align: center;
-            padding: 15px;
+            padding: 20px;
             margin-top: 40px;
             color: var(--secondary-color);
             font-size: 0.9rem;
+            background: rgba(18, 24, 35, 0.8);
+            border-top: 1px solid rgba(90, 141, 219, 0.2);
         }
-        .nav-pills {
-            overflow-x: auto;
-            white-space: nowrap;
+        
+        .empty-section {
+            min-height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            text-align: center;
+            color: #7a8fb1;
         }
-        .nav-pills .nav-link {
-            display: inline-block;
+        
+        .empty-section i {
+            font-size: 4rem;
+            margin-bottom: 1.5rem;
+            color: rgba(90, 141, 219, 0.3);
         }
+        
+        .math-icon {
+            position: absolute;
+            font-size: 1.5rem;
+            color: rgba(90, 141, 219, 0.2);
+            z-index: -1;
+        }
+        
+        .logo {
+            width: 120px;
+            height: 120px;
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            box-shadow: 0 0 25px rgba(51, 144, 255, 0.5);
+            border: 3px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .logo i {
+            font-size: 3.5rem;
+            color: white;
+        }
+        
         @media (max-width: 768px) {
+            .subject-title {
+                font-size: 2rem;
+            }
+            
+            .nav-pills .nav-link {
+                padding: 0.6rem 1rem;
+                font-size: 0.9rem;
+            }
+            
             .content-section {
                 padding: 15px;
             }
         }
+  
