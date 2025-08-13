@@ -420,25 +420,155 @@
                     </article>
                 </div>
             </div>
+                <nav class="mb-4">
+                    <ul class="nav nav-pills justify-content-center method-tabs" id="parcial3MethodTabs" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active" id="diferencias-tab" data-bs-toggle="pill" data-bs-target="#diferencias"
+                                type="button" role="tab" aria-controls="diferencias" aria-selected="true">Método de Diferencias divididas</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="trapecio-tab" data-bs-toggle="pill" data-bs-target="#trapecio"
+                                type="button" role="tab" aria-controls="trapecio" aria-selected="false">Método de Trapecio</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="simpson-tab" data-bs-toggle="pill" data-bs-target="#simpson"
+                                type="button" role="tab" aria-controls="simpson" aria-selected="false">Método de Simpson 1/3 y 3/8</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="romberg-tab" data-bs-toggle="pill" data-bs-target="#romberg"
+                                type="button" role="tab" aria-controls="romberg" aria-selected="false">Método de Romberg y Richardson</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="euler-tab" data-bs-toggle="pill" data-bs-target="#Euler"
+                                type="button" role="tab" aria-controls="Euler" aria-selected="false">Método de Euler y Euler modificado</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="kutta-tab" data-bs-toggle="pill" data-bs-target="#Kutta"
+                                type="button" role="tab" aria-controls="Kutta" aria-selected="false">Método de Runge-Kutta</button>
+                        </li>
+                    </ul>
+                </nav>
 
-            <!-- Parcial 3 -->
-            <div class="tab-pane fade" id="parcial3" role="tabpanel" aria-labelledby="parcial3-tab" tabindex="0">
-                <div class="content-section text-center">
-                    <i class="fas fa-hourglass-half"></i>
-                    <h2>Parcial 3 - Contenido en Desarrollo</h2>
-                    <p class="lead">Esta sección se encuentra actualmente en desarrollo.</p>
-                    <p class="text-muted">Próximamente se añadirán los contenidos del tercer parcial.</p>
+                <div class="tab-content" id="parcial3MethodTabsContent">
+                    <!-- Método de Diferencias divididas -->
+                    <article class="tab-pane fade show active content-section" id="diferencias" role="tabpanel" aria-labelledby="diferencias-tab" tabindex="0">
+                        <h2>Método de Diferencias divididas</h2>
+                        <section>
+                            <h3>Reporte del Método</h3>
+                            <div class="image-container">
+                                <img src="diferencias.jpeg" alt="Reporte Método de Diferencias divididas">
+                                <img src="diferencias1.jpeg" alt="Reporte Método de Diferencias divididas - Página 2">
+                                <img src="diferencias2.jpeg" alt="Reporte Método de Diferencias divididas - Página 3">
+                            </div>
+                        </section>
+                        <div class="back-button-container">
+                            <button class="back-button" onclick="showMethodTabs('parcial3MethodTabs')">
+                                <i class="fas fa-arrow-left"></i> Volver a Métodos
+                            </button>
+                        </div>
+                    </article>
+                    <!-- Método de Trapecio -->
+                    <article class="tab-pane fade content-section" id="trapecio" role="tabpanel" aria-labelledby="trapecio-tab" tabindex="0">
+                        <h2>Método de Trapecio</h2>
+                        <section>
+                            <h3>Reporte del Método</h3>
+                            <div class="image-container">
+                                <img src="Trapecio.jpeg" alt="Reporte Método de Montante">
+                                <img src="Trapecio1.jpeg" alt="Reporte Método de Montante - Página 2">
+                                <img src="Trapecio2.jpeg" alt="Reporte Método de Montante - Página 3">
+                                <img src="Trapecio3.jpeg" alt="Reporte Método de Montante - Página 4">
+                                <img src="Trapecio4.jpeg" alt="Reporte Método de Montante - Página 5">
+                            </div>
+                        </section>
+                        <div class="back-button-container">
+                            <button class="back-button" onclick="showMethodTabs('parcial3MethodTabs')">
+                                <i class="fas fa-arrow-left"></i> Volver a Métodos
+                            </button>
+                        </div>
+                    </article>
+                    <!-- Método de Simpson 1/3 y 3/8 -->
+                    <article class="tab-pane fade content-section" id="simpson" role="tabpanel" aria-labelledby="simpson-tab" tabindex="0">
+                        <h2>Método de Simpson 1/3 y 3/8</h2>
+                        <section>
+                            <h3>Reporte del Método</h3>
+                            <div class="image-container">
+                                <img src="simpson.jpeg" alt="Reporte Método de Simpson 1/3 y 3/8">
+                                <img src="simpson1.jpeg" alt="Reporte Método de Simpson 1/3 y 3/8">  
+                                <img src="simpson2.jpeg" alt="Reporte Método de Simpson 1/3 y 3/8 - Página 2">
+                            </div>
+                        </section>
+                        <div class="back-button-container">
+                            <button class="back-button" onclick="showMethodTabs('parcial3MethodTabs')">
+                                <i class="fas fa-arrow-left"></i> Volver a Métodos
+                            </button>
+                        </div>
+                    </article>
+                    <!-- Método de Romberg y Richardson -->
+                    <article class="tab-pane fade content-section" id="romberg" role="tabpanel" aria-labelledby="romberg-tab" tabindex="0">
+                        <h2>Método de Romberg y Richardson</h2>
+                        <section>
+                            <h3>Reporte del Método</h3>
+                            <div class="image-container">
+                                <img src="romberg1.jpeg" alt="Reporte Método de Romberg y Richardson">
+                                <img src="romberg2.jpeg" alt="Reporte Método de Romberg y Richardson - Página 2">
+                                <img src="romberg3.jpeg" alt="Reporte Método de Romberg y Richardson - Página 3">
+                                <img src="romberg.jpeg" alt="Reporte Método de Romberg y Richardson - Página 4">
+                                </div>
+                        </section>
+                        <div class="back-button-container">
+                            <button class="back-button" onclick="showMethodTabs('parcial3MethodTabs')">
+                                <i class="fas fa-arrow-left"></i> Volver a Métodos
+                            </button>
+                        </div>
+                    </article>
+                    <!-- Método de Euler y Euler modificado -->
+                    <article class="tab-pane fade content-section" id="Euler" role="tabpanel" aria-labelledby="euler-tab" tabindex="0">
+                        <h2>Método de Euler y Euler modificado</h2>
+                        <section>
+                            <h3>Reporte del Método</h3>
+                            <div class="image-container">
+                                <img src="Euler.png" alt="Reporte Método de Euler">
+                                <img src="Euler1.png" alt="Reporte Método de Euler - Página 2">
+                                <img src="Euler2.png" alt="Reporte Método de Euler - Página 3">
+                                <img src="Euler3.png" alt="Reporte Método de Euler - Página 4">
+                                <img src="Euler.png" alt="Reporte Método de Euler - Página 5">
+                                <img src="Euler5.png" alt="Reporte Método de Euler - Página 6">
+                                <img src="Euler6.png" alt="Reporte Método de Euler - Página 7">
+                                <img src="eulerr.jpeg" alt="Reporte Método de Euler y Euler modificado">
+                                <img src="eulerr1.jpeg" alt="Reporte Método de Euler y Euler modificado - Página 2">
+                            </div>
+                        </section>
+                        <div class="back-button-container">
+                            <button class="back-button" onclick="showMethodTabs('parcial3MethodTabs')">
+                                <i class="fas fa-arrow-left"></i> Volver a Métodos
+                            </button>
+                        </div>
+                    </article>
+                    <!-- Método de Runge-Kutta -->
+                    <article class="tab-pane fade content-section" id="Kutta" role="tabpanel" aria-labelledby="kutta-tab" tabindex="0">
+                        <h2>Método de Runge-Kutta</h2>
+                        <section>
+                            <h3>Reporte del Método</h3>
+                            <div class="image-container">
+                                <img src="kutta.png" alt="Reporte Método de Runge-Kutta">
+                                <img src="kutta1.png" alt="Reporte Método de Runge-Kutta - Página 2">  
+                                <img src="Kutta2.png" alt="Reporte Método de Runge-Kutta - Página 3">
+                                </div>
+                        </section>
+                        <div class="back-button-container">
+                            <button class="back-button" onclick="showMethodTabs('parcial3MethodTabs')">
+                                <i class="fas fa-arrow-left"></i> Volver a Métodos
+                            </button>
+                        </div>
+                    </article>
                 </div>
             </div>
-        </div>
-    </main>
-
     <!-- Footer -->
     <footer>
         <div class="container text-center">
             <p>© 2025 Métodos Numéricos - Universidad Regiomontana</p>
             <p>Desarrollado por Fidencio Jonas Castillo Lopez - Matrícula: 746644</p>
-        </div>
+        </div> nu
     </footer>
 
     <!-- Bootstrap JS -->
